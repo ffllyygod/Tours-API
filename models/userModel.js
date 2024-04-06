@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 const mongoose = require('mongoose');
 const crypto = require('crypto');
@@ -89,7 +88,7 @@ userSchema.methods.changesPasswordAfter = function (JWTTimeStamp) {
       this.passwordChangedAt.getTime() / 1000,
       10,
     );
-    console.log(this.passwordChangedAt, JWTTimeStamp);
+    // console.log(this.passwordChangedAt, JWTTimeStamp);
     return JWTTimeStamp < changedTimeStamp;
   }
   // It means password has not changed

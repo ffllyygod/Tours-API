@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const AppError = require('../utils/appError');
 
 const HandleCastErrorDB = (err) => {
@@ -39,7 +40,6 @@ const sendErrProd = (err, res) => {
       message: err.message,
     });
   } else {
-    // eslint-disable-next-line no-console
     console.log('error due to bug ig', err);
     res.status(500).json({
       status: 'error',

@@ -1,4 +1,4 @@
-// const fs = require('fs');
+/* eslint-disable import/no-dynamic-require */
 // eslint-disable-next-line import/no-dynamic-require
 const multer = require('multer');
 const sharp = require('sharp');
@@ -18,16 +18,6 @@ const factory = require('./handleFactory');
 //     return res.status(400).json({
 //       status: 'fail',
 //       message: 'Invalid Id',
-//     });
-//   }
-//   next();
-// };
-
-// exports.checkBody = (req, res, next) => {
-//   if (!req.body.name || !req.body.price) {
-//     return res.status(400).json({
-//       status: 'fail',
-//       message: 'Missing name or price',
 //     });
 //   }
 //   next();
@@ -248,15 +238,4 @@ exports.createTour = factory.createOne(Tour);
 // });
 
 exports.updateTour = factory.updateOne(Tour);
-
-// exports.deleteTour = catchAsync(async (req, res, next) => {
-//   const tour = await Tour.findByIdAndDelete(req.params.id);
-//   if (!tour) {
-//     return next(new AppError('No tour found with that id', 404));
-//   }
-//   res.status(204).json({
-//     status: 'success',
-//     data: null,
-//   });
-// });
 exports.deleteTour = factory.deleteOne(Tour);

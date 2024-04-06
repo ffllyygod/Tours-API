@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-dynamic-require */
 const Review = require(`${__dirname}/../models/reviewModel`);
 const factory = require('./handleFactory');
